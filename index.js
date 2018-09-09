@@ -87,8 +87,10 @@ export default class Header extends Component {
             outputRange: [-width - headerHeight / 2, -width - headerHeight]
         })
 
-        const openButtonContent = <MAIcon name="menu" size={defaultOpenButtonIconSize} color={defaultOpenButtonIconColor} />
-        const closeButtonContent = <MAIcon name="close" size={defaultCloseButtonIconSize} color={defaultCloseButtonIconColor} />
+//         const openButtonContent = <MAIcon name="menu" size={defaultOpenButtonIconSize} color={defaultOpenButtonIconColor} />
+//         const closeButtonContent = <MAIcon name="close" size={defaultCloseButtonIconSize} color={defaultCloseButtonIconColor} />
+         const openButtonContent = this.props.openButtonIconContent;
+        const closeButtonContent = this.props.closeButtonIconContent;
         const openButton = (
             <View style={{ ...openButtonStyle, position: 'absolute', left: 8, top: openButtonPosition == 'left' ? 14 : width - 40, transform: [{ rotate: '90deg' }] }}>
                 <TouchableOpacity onPress={this.onToggle}>
